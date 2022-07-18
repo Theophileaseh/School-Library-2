@@ -7,6 +7,30 @@ class Person
     @id = Random.rand(1...5000)
   end
 
+  # getters
+  def age
+    @age
+  end
+
+  def name
+    @name
+  end
+
+  def id
+    @id
+  end
+  # getters end
+
+  # setters
+  def name=(name)
+    @name = name
+  end
+
+  def age=(age)
+    @age = age
+  end
+  # setters end
+
   def of_age?
     @age >= 18
   end
