@@ -8,27 +8,15 @@ class Person
   end
 
   # getters
-  def age
-    @age
-  end
+  attr_accessor :age
 
-  def name
-    @name
-  end
+  attr_accessor :name
+  attr_reader :id
 
-  def id
-    @id
-  end
   # getters end
 
   # setters
-  def name=(name)
-    @name = name
-  end
 
-  def age=(age)
-    @age = age
-  end
   # setters end
 
   def of_age?
