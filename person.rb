@@ -1,4 +1,10 @@
-class Person
+require_relative './nameable'
+class Person < Nameable
+  
+  def correct_name
+    raise NotImplementedError.new('method should be implemented in concrete class')
+  end
+  
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
     @name = name
