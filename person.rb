@@ -1,4 +1,7 @@
 require_relative './nameable'
+require_relative './capitalize_decorator'
+require_relative './trimmer_decorator'
+
 class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -31,6 +34,11 @@ class Person < Nameable
 
   def can_use_services?
     of_age? || @parent_permission
+  end
+
+  def add_rental(rental)
+    @rentals.push(rental) unless @rentals.include?(rental)
+    rental.person = self
   end
 end
 
